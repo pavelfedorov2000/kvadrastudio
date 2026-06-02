@@ -1,0 +1,70 @@
+<footer class="footer">
+	<div class="container">
+		<div class="footer__grid">
+			<div class="footer__aside">
+				<div class="footer__logo">
+					<a href="#" class="logo">
+						<picture>
+							<source type="image/webp" srcset="assets/images/logo/footer-logo.webp">
+							<img class="logo__img" src="assets/images/logo/footer-logo.png" alt="лого" width="310"
+								height="84" loading="lazy">
+						</picture>
+					</a>
+					<span class="footer__logo-line"></span>
+					<p class="footer__logo-descr">
+						Студия дизайна интерьера в ярославле
+					</p>
+				</div>
+				<picture class="footer__picture">
+					<source type="image/webp" srcset="assets/images/content/02.webp">
+					<img src="assets/images/content/02.jpg" alt="" width="" height="" loading="lazy">
+				</picture>
+			</div>
+			<div class="footer__main">
+				<div class="footer__menu footer__menu--1">
+					<span class="footer__menu-title">Дизайн</span>
+					<ul class="footer__list">
+						<li><a class="footer__menu-link" href="#">Дизайн домов</a></li>
+						<li><a class="footer__menu-link" href="#">Дизайн квартир</a></li>
+						<li><a class="footer__menu-link" href="#">Дизайн ванной</a></li>
+						<li><a class="footer__menu-link" href="#">Дизайн спален</a></li>
+					</ul>
+				</div>
+				<div class="footer__menu footer__menu--2">
+					<span class="footer__menu-title">Услуги</span>
+					<ul class="footer__list">
+						<li><a class="footer__menu-link" href="#">Авторский надзор</a></li>
+						<li><a class="footer__menu-link" href="#">Архитектурное проектирование</a></li>
+						<li><a class="footer__menu-link" href="#">Ремонтно-отделочные работы</a></li>
+						<li><a class="footer__menu-link" href="#">Технический состав проекта</a></li>
+					</ul>
+				</div>
+				<address class="footer__contact">
+					@@include('blocks/button/button.html', {
+                        "class": "footer__btn",
+                        "style": "border",
+                        "text": "Перезвоните мне"
+					})
+					<div class="footer__contacts">
+						<div class="contacts">
+							<span>г. Ярославль,</span>
+							<p>ул. Щапова, 20, Офис 326</p>
+						</div>
+						<div class="contacts">
+							<a href="tel:+74852942850">+7 (4852) 94-28-50</a>
+							<p>Пн-Пт: 9.00 - 18.00</p>
+						</div>
+						<div class="contacts">
+							<a href="mailto:info@kvadrastudio.ru">info@kvadrastudio.ru</a>
+						</div>
+					</div>
+				</address>
+				<p class="footer__copy">2022© kvadrastudio.ru</p>
+				<a class="footer__politics" href="#">Политика конфиденциальности</a>
+				<p class="footer__developer">
+					Создание и продвижение сайта: <a href="#">ITB-Studio</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</footer>

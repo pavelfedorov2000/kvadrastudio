@@ -1,0 +1,144 @@
+.nav-menu {
+	@include padding-y(3rem);
+	display: flex;
+
+	@media(min-width: $xl) {
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	@media(max-width: $lg) {
+		flex-direction: column;
+		gap: 1.6rem;
+	}
+
+	// .nav-menu__link
+
+	&__link {
+		@extend %text-16;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: #000;
+		transition: $transition color;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--accent);
+			}
+		}
+	}
+
+	>span {
+		display: none;
+
+		@media(min-width: $xl) {
+			display: inline-block;
+			@include round(0.5rem);
+			background-color: var(--black);
+		}
+	}
+}
+
+.header {
+	@media(min-width: $xl) {
+		height: var(--header-height);
+	}
+
+	@media(max-width: $lg) {
+		padding-bottom: var(--gap-xxxs);
+	}
+
+	// .header__inner
+
+	&__inner {
+		@media(min-width: $xl) {
+			display: grid;
+			align-items: center;
+			grid-template-columns: auto var(--gap-xs) auto 1fr 31rem 1fr auto var(--gap-xs) auto;
+			grid-template-rows: 2rem auto 3rem auto;
+			grid-template-areas: '. . . . . . . . .'
+				'address . email . logo . phone . btn'
+				'. . . . . . . . .'
+				'nav nav nav nav nav nav nav nav nav'
+			;
+		}
+
+		@media(max-width: $lg) {
+			@include padding-y(var(--gap-xxxs));
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			border-bottom: 0.1rem solid var(--color-999);
+		}
+	}
+
+	// .header__address
+
+	&__address {
+		display: none;
+
+		@media(min-width: $xl) {
+			display: flex;
+			grid-area: address;
+		}
+	}
+
+	// .header__email
+
+	&__email {
+		display: none;
+
+		@media(min-width: $xl) {
+			display: inline-block;
+			grid-area: email;
+		}
+	}
+
+	// .header__logo
+
+	&__logo {
+		height: 8.4rem;
+
+		@media(max-width: $lg) {
+			width: 18.6rem;
+			height: 5.3rem;
+		}
+
+		@media(min-width: $xl) {
+			grid-area: logo;
+		}
+	}
+
+	// .header__phone
+
+	&__phone {
+		display: none;
+
+		@media(min-width: $xl) {
+			display: flex;
+			grid-area: phone;
+		}
+	}
+
+	&__btn {
+		display: none;
+
+		@media(min-width: $xl) {
+			grid-area: btn;
+			display: inline-flex;
+			padding: 1rem 3rem;
+			border-width: 0.1rem;
+		}
+	}
+
+	&__menu {
+		display: none;
+
+		@media(min-width: $xl) {
+			display: flex;
+			padding-top: var(--gap-xxs);
+			border-top: 0.1rem solid var(--color-999);
+			grid-area: nav;
+		}
+	}
+}

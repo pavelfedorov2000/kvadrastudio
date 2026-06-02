@@ -1,0 +1,86 @@
+.review {
+	@extend %proxima-light;
+	width: 100%;
+	// .review__text
+
+	&__text {
+		@extend %text-32;
+		letter-spacing: 0.02em;
+		margin-bottom: var(--gap-xs);
+		position: relative;
+
+		@media(min-width: $xl) {
+			padding-left: 15rem;
+		}
+
+		@media(max-width: $lg) {
+			padding-top: 4.8rem;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			@extend %pos-center-y;
+			left: 0rem;
+			width: 12rem;
+			height: 12rem;
+			background-image: url(../images/icons/quotes.svg);
+			@extend %bg-contain;
+
+			@media(max-width: $lg) {
+				width: 3.2rem;
+				height: 3.2rem;
+				top: 0;
+				transform: none;
+			}
+		}
+	}
+
+	// .review__info
+
+	&__info {
+		@extend %text-28;
+		font-style: italic;
+		letter-spacing: 0.02em;
+		color: #C5C5C5;
+
+		@media(max-width: $sm) {
+			font-size: 1.4rem;
+			line-height: calc(18 / 14 * 100%);
+		}
+
+		@media(min-width: $xl) {
+			margin-left: 15rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&__author {
+		position: relative;
+		padding-left: var(--gap-xxxs);
+
+		@media(max-width: $lg) {
+			margin-bottom: 1rem;
+		}
+
+		@media(max-width: $sm) {
+			padding-left: 1.5rem;
+		}
+
+		&::before {
+			@extend %text-28;
+			content: '-';
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: #C5C5C5;
+
+			@media(max-width: $sm) {
+				font-size: 1.4rem;
+				line-height: calc(18 / 14 * 100%);
+			}
+		}
+	}
+}

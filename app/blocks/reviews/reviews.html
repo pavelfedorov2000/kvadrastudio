@@ -1,0 +1,36 @@
+<section class="reviews">
+	<div class="reviews__body" style="background-image: url(assets/images/content/reviews-bg.jpg);">
+		<div class="container">
+			<div class="reviews__grid">
+				<h2 class="title-60 reviews__title">
+					Отзывы <b>о нас</b>
+				</h2>
+				<div class="swiper reviews-slider reviews__slider">
+					<ul class="swiper-wrapper">
+						@@include('blocks/review/review.html')
+						@@include('blocks/review/review.html')
+						@@include('blocks/review/review.html')
+						@@include('blocks/review/review.html')
+					</ul>
+				</div>
+				<div class="reviews__controls">
+					<div class="slider-arrow slider-arrow--prev">
+						<svg class="slider-arrow__svg" viewBox="0 0 215 16" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M0.292877 7.29287C-0.097641 7.6834 -0.097641 8.31656 0.292877 8.70709L6.65684 15.071C7.04736 15.4616 7.68053 15.4616 8.07106 15.071C8.46158 14.6805 8.46158 14.0474 8.07106 13.6568L2.4142 7.99998L8.07106 2.34313C8.46158 1.9526 8.46158 1.31944 8.07106 0.928914C7.68053 0.53839 7.04736 0.53839 6.65685 0.928914L0.292877 7.29287ZM215 7L0.999985 6.99998L0.999985 8.99998L215 9L215 7Z" />
+						</svg>
+					</div>
+					<div class="swiper-pagination"></div>
+					<div class="slider-arrow slider-arrow--next">
+						<svg class="slider-arrow__svg" viewBox="0 0 215 16" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M214.707 8.70711C215.098 8.31658 215.098 7.68342 214.707 7.29289L208.343 0.928932C207.953 0.538408 207.319 0.538408 206.929 0.928932C206.538 1.31946 206.538 1.95262 206.929 2.34315L212.586 8L206.929 13.6569C206.538 14.0474 206.538 14.6805 206.929 15.0711C207.319 15.4616 207.953 15.4616 208.343 15.0711L214.707 8.70711ZM0 9L214 9V7L0 7L0 9Z" />
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

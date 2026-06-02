@@ -1,0 +1,12 @@
+.burger-btn {
+	display: none;
+
+	@media (max-width: $lg) {
+		display: block;
+	}
+
+	img {
+		width: 5.5rem;
+		height: 2.4rem;
+	}
+}

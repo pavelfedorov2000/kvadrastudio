@@ -1,0 +1,37 @@
+<section class="section portfolio">
+	<div class="container container--desktop">
+		<div class="section__grid">
+			<div class="section__top">
+				<h2 class="title-60 animated animated-text">
+					<span>Наше по<span>р</span>тфолио</span>
+				</h2>
+				<p class="animated animated-text">Все фото наших работ - это 100% настоящие фотографии выполненных нами
+					проектов.
+				</p>
+			</div>
+			<ul class="portfolio__items">
+				@@loop('blocks/portfolio-item/portfolio-item.html', [{
+                    "src": "assets/images/content/portfolio/01",
+                    "title": "Неоклассика с мароканскими мотивами",
+                    "square": "109 м2",
+                    "address": "Ярославль, Московский проспект"
+				}, {
+                    "src": "assets/images/content/portfolio/02",
+                    "title": "Минимализм в деталях",
+                    "square": "73 м2",
+                    "address": "Ярославль, ул. Наумова"
+				}, {
+                    "src": "assets/images/content/portfolio/03",
+                    "title": "Таунхаус в неоклассическом стиле",
+                    "square": "145 м2",
+                    "address": "Ярославль, ул. Космонавтов"
+				}, {
+                    "src": "assets/images/content/portfolio/04",
+                    "title": "Изящная неоклассика",
+                    "square": "105 м2",
+                    "address": "Ярославль, Большая Октябрьская"
+				}])
+			</ul>
+		</div>
+	</div>
+</section>

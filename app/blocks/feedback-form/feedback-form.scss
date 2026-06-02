@@ -1,0 +1,91 @@
+.feedback-form {
+	$btn-width: 42.7rem;
+
+	@include row-grid(var(--gap-xs));
+	padding: var(--gap-xs);
+	background-color: var(--white);
+	box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.1);
+
+	@media(min-width: $xl) {
+		grid-template-columns: 1fr $btn-width 1fr;
+	}
+
+	@media(max-width: $lg) {
+		padding: 2.4rem 1.6rem;
+	}
+
+	@media(max-width: $sm) {
+		row-gap: 2.4rem;
+	}
+
+	>* {
+		grid-column: 1 / -1;
+	}
+
+	// .feedback-form__fields
+
+	&__fields {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--gap-xs) var(--gap-xxs);
+
+		@media(max-width: $lg) {
+			gap: var(--gap-xxxs) 2.4rem;
+		}
+	}
+
+	// .feedback-form__field
+
+	&__field {
+		position: relative;
+	}
+
+	&__btn {
+		font-size: 1.8rem;
+		line-height: calc(56 / 18 * 100%);
+
+		@media(min-width: $xl) {
+			grid-column: 2 / 3;
+		}
+
+		@media(max-width: $sm) {
+			font-size: 1.4rem;
+			line-height: calc(40.25 / 14 * 100%);
+		}
+	}
+}
+
+.input {
+	width: 100%;
+	padding: 1.6rem var(--gap-xxs);
+	border-bottom: 0.2rem solid var(--accent);
+
+	@media(max-width: $sm) {
+		padding: 0 0 0.8rem;
+		border-bottom-width: 0.082rem;
+	}
+
+	&::placeholder {
+		color: var(--color-888);
+	}
+}
+
+.textarea {
+	min-height: 12rem;
+	border-top: none;
+	border-right: none;
+	border-left: 0.2rem solid var(--accent);
+
+	@media(max-width: $sm) {
+		border-left-width: 0.082rem;
+		padding-left: 1.2rem;
+	}
+
+	&~.placeholder {
+		left: 1.6rem;
+
+		@media(max-width: $sm) {
+			left: 1.2rem;
+		}
+	}
+}

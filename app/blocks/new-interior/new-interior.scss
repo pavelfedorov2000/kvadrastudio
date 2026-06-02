@@ -1,0 +1,28 @@
+.new-interior {
+	&__arrow {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 1.6rem;
+		height: 21.5rem;
+
+		@media(max-width: $sm) {
+			height: 10.5rem;
+		}
+	}
+
+	&__title {
+		span {
+			span {
+				@media(max-width: $sm) {
+					display: block;
+					margin-left: calc(var(--gap-s) - var(--mobile-padding));
+				}
+			}
+		}
+
+		@media(max-width: $sm) {
+			margin-bottom: 1.6rem;
+		}
+	}
+}

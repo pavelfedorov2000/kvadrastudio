@@ -1,0 +1,116 @@
+.tariffs {
+	--card-height: 89.9rem;
+	--picture-1-height: 32.6rem;
+	--picture-2-height: 48.7rem;
+
+	background-image: url(../images/content/tariffs-bg.jpg);
+	background-position: left var(--gap-s);
+	background-size: 100% 82.4rem;
+	background-repeat: no-repeat;
+	padding-bottom: 31.1rem;
+
+	@media(max-width: $lg) {
+		position: relative;
+		padding-bottom: 13.5rem;
+
+		&::before {
+			content: '';
+			position: absolute;
+			right: var(--mobile-padding);
+			bottom: var(--gap-xs);
+			@include round(10rem);
+			border: 0.1rem dashed rgba(255, 255, 255, 0.8);
+		}
+	}
+
+	// .tariffs__grid
+
+	&__grid {
+		margin-top: var(--gap-xs);
+		display: grid;
+		gap: var(--gap-xxs);
+
+		@media(min-width: $xl) {
+			position: relative;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, var(--gap-s)) auto repeat(2, var(--gap-s));
+			grid-template-areas:
+				'card-1 . .'
+				'card-1 card-2 .'
+				'card-1 card-2 card-3'
+				'. card-2 card-3'
+				'. . card-3'
+			;
+		}
+
+		@media(max-width: $lg) {
+			row-gap: 3.2rem;
+		}
+
+		@media(max-width: $sm) {
+			margin-top: 2.4rem;
+		}
+	}
+
+	// .tariffs__card-1
+
+	&__card-1 {
+		@media(min-width: $xl) {
+			grid-area: card-1;
+		}
+	}
+
+	// .tariffs__card-2
+
+	&__card-2 {
+		@media(min-width: $xl) {
+			grid-area: card-2;
+		}
+	}
+
+	// .tariffs__card-3
+
+	&__card-3 {
+		@media(min-width: $xl) {
+			grid-area: card-3;
+		}
+	}
+
+	&__picture {
+		position: absolute;
+
+		img {
+			@extend %cover;
+		}
+	}
+
+	// .tariffs__picture-1
+
+	&__picture-1 {
+		width: 35.8rem;
+		height: 32.6rem;
+		top: 0;
+		right: 25.8rem;
+
+		@media(max-width: $lg) {
+			top: 30%;
+			right: 0;
+			width: 20rem;
+			height: 20rem;
+		}
+	}
+
+	// .tariffs__picture-2
+
+	&__picture-2 {
+		bottom: -21.1rem;
+		left: 12.9rem;
+
+		@media(max-width: $lg) {
+			width: 17rem;
+			height: 17rem;
+			bottom: var(--gap-xs);
+			left: calc(var(--mobile-padding) * 2);
+		}
+	}
+}

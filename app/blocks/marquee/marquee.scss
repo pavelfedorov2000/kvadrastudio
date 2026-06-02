@@ -1,0 +1,73 @@
+.marquee {
+	$this: &;
+
+	@include padding-y(var(--gap-xs));
+	background-color: var(--accent);
+	color: var(--white);
+	overflow: hidden;
+
+	@media(max-width: $sm) {
+		@include padding-y(2.6rem);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			#{$this}__content {
+				animation-play-state: paused;
+			}
+		}
+	}
+
+	// .marquee__inner
+
+	&__inner {
+		width: 100000px;
+	}
+
+	// .marquee__content
+
+	&__content {
+		animation-name: marquee;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		float: left;
+		display: flex;
+		align-items: center;
+		gap: var(--gap-xs);
+		margin-right: var(--gap-xs);
+
+		@media(max-width: $sm) {
+			gap: var(--gap-xxs);
+			margin-right: var(--gap-xxs);
+		}
+
+		span {
+			@media(max-width: $sm) {
+				font-size: 2.4rem;
+				line-height: calc(28 / 24 * 100%);
+			}
+		}
+	}
+
+	&__arrow {
+		width: 5.3rem;
+		height: 3.8rem;
+		fill: #FCFCFC;
+
+		@media(max-width: $sm) {
+			width: 5rem;
+			height: 1.6rem;
+		}
+	}
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(-100%);
+	}
+}

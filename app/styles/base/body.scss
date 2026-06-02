@@ -1,0 +1,136 @@
+body {
+	min-width: 320px;
+	font-style: normal;
+	font-family: $ff;
+	font-size: calc(#{$fz} / 10 * 1rem);
+	line-height: 1.5;
+	font-weight: 400;
+	color: $color-default;
+	overflow-x: hidden;
+
+	@media(max-width: $lg) {
+		font-size: 1.4rem;
+	}
+
+	&._lock {
+		overflow-y: hidden;
+	}
+}
+
+button,
+input,
+textarea {
+	font-family: $ff;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+	border: none;
+
+	table & {
+		max-width: none;
+	}
+}
+
+p {
+	@extend %text-32;
+	letter-spacing: 0.02em;
+}
+
+.img-cover {
+	@extend %cover;
+}
+
+.animated {
+	&-text {
+		@media(min-width: $xl) {
+			opacity: 0;
+			transform: translateY(var(--gap-xs));
+			transition: $transition-long all;
+
+			&.in-view {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	}
+
+	&-opacity {
+		@media(min-width: $xl) {
+			opacity: 0;
+			transition: $transition-long opacity;
+
+			&.in-view {
+				opacity: 1;
+			}
+		}
+	}
+
+	&-img {
+		@media(min-width: $xl) {
+			width: 0;
+			opacity: 0;
+			transition: $transition-long width,
+				$transition-long opacity;
+
+			&.in-view {
+				width: 100%;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.arrow {
+	fill: var(--black);
+	animation: scroll-down;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+
+	&--white {
+		fill: var(--white);
+	}
+}
+
+.contacts {
+	@extend %text-16;
+	display: flex;
+	gap: 0.5rem;
+
+	p {
+		@extend %text-16;
+	}
+
+	b,
+	span {
+		@extend %proxima-semibold;
+	}
+
+	a {
+		transition: $transition color;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--accent);
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 0.5rem;
+		}
+	}
+}
+
+.contact {
+	@extend %proxima-semibold;
+	transition: $transition color;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--accent);
+		}
+	}
+}

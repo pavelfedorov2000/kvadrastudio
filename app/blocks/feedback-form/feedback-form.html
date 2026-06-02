@@ -1,0 +1,24 @@
+<form class="feedback-form feedback__form">
+	<h2 class="title-80 feedback-form__title animated animated-text">
+		Обратная <b>связь</b>
+	</h2>
+	<div class="feedback-form__fields">
+		<label class="feedback-form__field span-2">
+			<input class="input" placeholder="Ваше имя*" required>
+		</label>
+		<label class="feedback-form__field">
+			<input class="input" type="tel" placeholder="Ваш номер телефона*" required>
+		</label>
+		<label class="feedback-form__field">
+			<input class="input" type="email" placeholder="Ваш E-mail*">
+		</label>
+		<label class="feedback-form__field span-2">
+			<textarea class="input textarea" placeholder="Ваше сообщение*" required></textarea>
+		</label>
+	</div>
+	@@include('blocks/button/button.html', {
+        "class": "feedback-form__btn animated animated-text",
+        "type": "submit",
+        "text": "Отправить"
+	})
+</form>

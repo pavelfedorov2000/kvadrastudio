@@ -1,0 +1,27 @@
+:root {
+	--accent: #897163;
+	--black: #333333;
+	--white: #fff;
+	--color-888: #888;
+	--color-999: #999;
+	--color-555: #555;
+	--gray: #95a0af;
+	--light-gray: #d7dded;
+	--red: #e73656;
+	--line-color: #ddd;
+	--light-blue: #ecf1ff;
+
+	--gap: 20rem;
+	--gap-s: 10rem;
+	--gap-xs: 5rem;
+	--gap-xxs: 3rem;
+	--gap-xxxs: 2rem;
+	--header-height: 22.6rem;
+	--section-padding: var(--gap-s);
+	--section-padding-xs: var(--gap-xs);
+	--mobile-padding: 1.6rem;
+
+	@media(max-width: $lg) {
+		--section-padding: var(--gap-xs);
+	}
+}

@@ -1,0 +1,7 @@
+@function rem($value) {
+    @return calc($value / 10 * 1rem);
+}
+
+@function getLineHeightInPercents($line-height-in-px, $font-size) {
+    @return round(calc($line-height-in-px / $font-size * 100%));
+}

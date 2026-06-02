@@ -1,0 +1,73 @@
+.numbers {
+	@media(max-width: $sm) {
+		padding-top: 2.4rem;
+	}
+
+	// .numbers__list
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+
+		@media(max-width: $lg) {
+			gap: 3.2rem 0;
+		}
+	}
+
+	// .numbers__item
+
+	&__item {
+		width: 25%;
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		text-align: center;
+		gap: var(--gap-xxs);
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+
+		@media(max-width: $lg) {
+			width: 50%;
+			gap: 0.4rem;
+		}
+
+		dt {
+			@extend %text-28;
+
+			@media(max-width: $sm) {
+				font-size: 1.8rem;
+				line-height: calc(32 / 18 * 100%);
+			}
+		}
+
+		dd {
+			@extend %ashley;
+			font-size: 6rem;
+			line-height: 122%;
+
+			@media(max-width: $sm) {
+				font-size: 3.8rem;
+				line-height: 100%;
+			}
+
+			img {
+				@media(max-width: $sm) {
+					width: 5rem;
+					height: 3.8rem;
+				}
+			}
+		}
+	}
+}
+
+.numbers-picture {
+	display: block;
+
+	@media(max-width: $sm) {
+		height: 31rem;
+	}
+
+	img {
+		@extend %cover;
+	}
+}

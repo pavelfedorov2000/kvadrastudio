@@ -1,0 +1,177 @@
+.benefits {
+	$this: &;
+
+	position: relative;
+	background-color: var(--accent);
+	color: var(--white);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 37rem;
+		width: 0.3rem;
+		background-image: url(../images/white-line.svg);
+
+		@media(max-width: $lg) {
+			right: auto;
+			left: var(--mobile-padding);
+			top: 5rem;
+		}
+	}
+
+	&__items {
+		@include row-grid(var(--gap-s));
+
+		@media(max-width: $lg) {
+			row-gap: var(--gap-xs);
+		}
+
+		@media(min-width: $xl) {
+			grid-auto-rows: minmax(40rem, auto);
+		}
+	}
+
+	// .benefits__item
+
+	&__item {
+		position: relative;
+		z-index: 2;
+		display: flex;
+		align-items: center;
+		gap: var(--gap-xxs);
+
+		@media(max-width: $lg) {
+			display: grid;
+			gap: 1.6rem 0;
+			grid-template-columns: 1.6rem 1fr 5.3rem;
+		}
+
+		@media(max-width: $sm) {
+			grid-auto-rows: 16rem auto;
+		}
+
+		&:first-child {
+			&::before {
+				@media(min-width: $xl) {
+					content: '';
+					position: absolute;
+					bottom: -18.6rem;
+					left: -18.6rem;
+					@include round(37.2rem);
+					border: 0.1rem dashed rgba(255, 255, 255, 0.8);
+					animation-name: rotate;
+					animation-duration: 10s;
+					animation-timing-function: ease-in-out;
+					animation-iteration-count: infinite;
+				}
+			}
+
+			#{$this} {
+				&__item-img {
+					@media(max-width: $sm) {
+						position: relative;
+
+						&::before {
+							content: '';
+							position: absolute;
+							right: -5rem;
+							top: -3.8rem;
+							@include round(10rem);
+							border: 0.1rem dashed rgba(255, 255, 255, 0.8);
+						}
+					}
+				}
+			}
+		}
+
+		&:nth-child(even) {
+			@media(min-width: $xl) {
+				flex-direction: row-reverse;
+			}
+
+			@media(max-width: $lg) {
+				grid-template-columns: 5.3rem 1fr 4.5rem;
+
+				#{$this} {
+					&__item-text {
+						grid-column: 1 / -1;
+						display: grid;
+						grid-template-columns: 1.6rem 5.3rem - 1.6rem 1fr;
+
+						span {
+							&:first-child {
+								grid-column: 3 / -1;
+							}
+
+							&:last-child {
+								grid-column: 2 / -1;
+								text-align: left;
+							}
+						}
+					}
+
+					&__item-img {
+						grid-column: 2 / -1;
+					}
+				}
+			}
+
+			>* {
+				@media(min-width: $xl) {
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	// .benefits__item-img
+
+	&__item-img {
+		@media(min-width: $xl) {
+			width: 0;
+			opacity: 0;
+			transition: $transition-long all;
+		}
+
+		@media(max-width: $lg) {
+			grid-column: 1 / -2;
+		}
+
+		&.in-view {
+			@media(min-width: $xl) {
+				width: 50%;
+				opacity: 1;
+			}
+		}
+
+		img {
+			@extend %cover;
+		}
+	}
+
+	// .benefits__item-text
+
+	&__item-text {
+		display: inline-grid;
+		row-gap: var(--gap-xxxs);
+
+		@media(max-width: $lg) {
+			row-gap: 0.8rem;
+			grid-column: 2 / -1;
+		}
+
+		span {
+			font-family: "Proxima Nova Lt",
+				sans-serif;
+			font-weight: 300;
+
+			&:last-child {
+				@media(max-width: $sm) {
+					text-align: right;
+				}
+			}
+		}
+	}
+}

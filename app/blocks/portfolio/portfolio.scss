@@ -1,0 +1,26 @@
+.portfolio {
+	// .portfolio__items
+
+	&__items {
+		@include row-grid(var(--gap-xs));
+
+		@media(min-width: $xl) {
+			position: relative;
+			grid-template-columns: repeat(2, 1fr);
+			gap: var(--gap-s) var(--gap-xxs);
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: -18.6rem;
+				right: -18.6rem;
+				@include round(37.2rem);
+				border: 0.1rem dashed rgba(153, 153, 153, 0.8);
+				animation-name: rotate;
+				animation-duration: 10s;
+				animation-timing-function: ease-in-out;
+				animation-iteration-count: infinite;
+			}
+		}
+	}
+}

@@ -1,0 +1,107 @@
+.customer-focus {
+	@media(max-width: $lg) {
+		padding-bottom: 0;
+	}
+
+	// .customer-focus__grid
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 50rem repeat(2, var(--gap)) 28.6rem 1fr;
+		grid-template-rows: auto var(--gap-xs) 32.6rem 14.2rem 3.3rem 4rem;
+
+		@media(min-width: $xl) {
+			grid-template-areas: 'heading heading heading heading heading'
+				'. . . . .'
+				'picture-1 . . picture-2 .'
+				'picture-1 . . . .'
+				'picture-1 . text text text'
+				'. . text text text'
+			;
+		}
+
+		@media(max-width: $lg) {
+			grid-template-columns: var(--mobile-padding) 1fr calc(19.6rem - var(--mobile-padding)) var(--mobile-padding);
+			grid-template-rows: auto 1.6rem 50rem 12.6rem;
+		}
+	}
+
+	&__heading {
+		@media(min-width: $xl) {
+			grid-area: heading;
+		}
+
+		@media(max-width: $lg) {
+			grid-column: 2 / -2;
+			grid-row: 1 / 2;
+		}
+	}
+
+	// .customer-focus__picture--1
+
+	&__picture {
+		&--1 {
+			@media(min-width: $xl) {
+				grid-area: picture-1;
+			}
+
+			@media(max-width: $lg) {
+				grid-row: 3 / 4;
+				grid-column: 2 / -1;
+			}
+		}
+
+		&--2 {
+			@media(min-width: $xl) {
+				position: relative;
+				grid-area: picture-2;
+
+				&::before {
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 0.4rem;
+					height: 64rem;
+					background-color: var(--black);
+				}
+			}
+
+			@media(max-width: $lg) {
+				grid-column: 3 / -1;
+				grid-row: 4 / 5;
+			}
+		}
+
+		img {
+			@extend %cover;
+		}
+	}
+
+	// .customer-focus__text
+
+	&__text {
+		@media(min-width: $xl) {
+			grid-area: text;
+			white-space: nowrap;
+		}
+
+		@media(max-width: $lg) {
+			position: relative;
+			padding-top: var(--gap-xxxs);
+			padding-left: 1.6rem;
+			grid-row: 4 / 5;
+			grid-column: 2 / 4;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 0.2rem;
+				height: 100%;
+				background-color: var(--black);
+			}
+		}
+	}
+}

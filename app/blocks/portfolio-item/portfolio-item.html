@@ -1,0 +1,18 @@
+<li>
+	<article class="portfolio-item">
+		<picture class="portfolio-item__img">
+			<source type="image/webp" srcset="@@src.webp">
+			<img src="@@src.jpg" alt="фото" width="745" height="700" loading="lazy">
+		</picture>
+		<div class="portfolio-item__content">
+			<h3 class="portfolio-item__title animated animated-text">@@title</h3>
+			<div class="portfolio-item__square animated animated-text">@@square</div>
+			<p class="portfolio-item__address animated animated-text">@@address</p>
+			@@include('blocks/button/button.html', {
+                "class": "portfolio-item__btn animated animated-text",
+                "style": "link",
+                "text": "Смотреть проект"
+			})
+		</div>
+	</article>
+</li>
