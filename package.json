@@ -1,7 +1,7 @@
 {
   "name": "kvadrastudio",
   "version": "2.0.0",
-  "description": "A template for a quick start",
+  "description": "Landing page with beautiful design",
   "keywords": [
     "project",
     "template",
@@ -30,13 +30,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:imediasolutionsby/project-front-template-html.git"
+    "url": "https://github.com/pavelfedorov2000/kvadrastudio.git"
   },
-  "author": "Pavel Fedorov <p.fedorov@imedia.by>",
+  "author": "Pavel Fedorov <pashok05_01@mail.ru>",
   "contributors": [],
   "bugs": {
     "url": "",
-    "email": "p.fedorov@imedia.by"
+    "email": "pashok05_01@mail.ru"
   },
   "homepage": "",
   "engines": {

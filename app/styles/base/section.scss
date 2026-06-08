@@ -1,0 +1,36 @@
+.section {
+	@include padding-y(var(--section-padding));
+
+	&--without {
+		&_padding-top {
+			padding-top: 0;
+		}
+	}
+
+	&--padding-top {
+		&_xs {
+			padding-top: var(--section-padding-xs);
+		}
+	}
+
+	&__top {
+		> * {
+			&:not(:last-child) {
+				margin-bottom: var(--gap-xxxs);
+
+				@media(max-width: $sm) {
+					margin-bottom: 0.8rem;
+				}
+			}
+		}
+	}
+
+	&__grid {
+		position: relative;
+		@include row-grid(var(--gap-xs));
+
+		@media(max-width: $lg) {
+			gap: var(--gap-xxs);
+		}
+	}
+}

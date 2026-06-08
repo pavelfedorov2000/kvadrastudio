@@ -1,13 +1,19 @@
 <section class="section tariffs">
 	<div class="container">
 		<div class="section__top">
-			<h2 class="title-80">
-				Наши <b>тарифы</b>
-			</h2>
+			@@include('blocks/ui/title/title.html', {
+				"level": "h2",
+				"customClass": "title-80",
+				"text": "Наши <b>тарифы</b>"
+			})
 		</div>
 		<div class="tariffs__grid">
 			<article class="tariff-card tariffs__card-1">
-				<h3 class="tariff-card__title">Концепция</h3>
+				@@include('blocks/ui/title/title.html', {
+					"level": "h3",
+					"class": "tariff-card__title",
+					"text": "Концепция"
+				})
 				<ul class="tariff-card__list">
 					<li>
 						Планировочные решения (проектируем с учетом мебели и оборудования)
@@ -26,20 +32,24 @@
 					<sub>₽/м2</sub>
 				</div>
 				<div class="tariff-card__btns">
-					@@include('blocks/button/button.html', {
+					@@loop('blocks/ui/button/button.html', [{
                         "class": "tariff-card__btn",
                         "text": "Заказать"
-					})
-					@@include('blocks/button/button.html', {
-                        "style": "border-dark",
+					}, {
+                        "mod": "dark",
+						"variant": "outlined",
                         "class": "tariff-card__btn",
                         "icon": "download",
                         "text": "Скачать прайс"
-					})
+					}])
 				</div>
 			</article>
 			<article class="tariff-card tariffs__card-2">
-				<h3 class="tariff-card__title">Комплекс</h3>
+				@@include('blocks/ui/title/title.html', {
+					"level": "h3",
+					"class": "tariff-card__title",
+					"text": "Комплекс"
+				})
 				<ul class="tariff-card__list">
 					<li>Все по тарифу “Концепция плюс”</li>
 					<li>
@@ -57,20 +67,24 @@
 					<sub>₽/м2</sub>
 				</div>
 				<div class="tariff-card__btns">
-					@@include('blocks/button/button.html', {
+					@@loop('blocks/ui/button/button.html', [{
                         "class": "tariff-card__btn",
                         "text": "Заказать"
-					})
-					@@include('blocks/button/button.html', {
-                        "style": "border-dark",
+					}, {
+                        "mod": "dark",
+						"variant": "outlined",
                         "class": "tariff-card__btn",
                         "icon": "download",
                         "text": "Скачать прайс"
-					})
+					}])
 				</div>
 			</article>
 			<article class="tariff-card tariffs__card-3">
-				<h3 class="tariff-card__title">Комфорт</h3>
+				@@include('blocks/ui/title/title.html', {
+					"level": "h3",
+					"class": "tariff-card__title",
+					"text": "Комфорт"
+				})
 				<ul class="tariff-card__list">
 					<li>Все по тарифу “Комплекс плюс”</li>
 					<li>Авторский надзор и информационное сопровождение проекта</li>
@@ -85,26 +99,33 @@
 					<sub>₽/м2</sub>
 				</div>
 				<div class="tariff-card__btns">
-					@@include('blocks/button/button.html', {
+					@@loop('blocks/ui/button/button.html', [{
                         "class": "tariff-card__btn",
                         "text": "Заказать"
-					})
-					@@include('blocks/button/button.html', {
-                        "style": "border-dark",
+					}, {
+                        "mod": "dark",
+						"variant": "outlined",
                         "class": "tariff-card__btn",
                         "icon": "download",
                         "text": "Скачать прайс"
-					})
+					}])
 				</div>
 			</article>
-			<picture class="tariffs__picture tariffs__picture-1 animated animated-opacity">
-				<source type="image/webp" srcset="assets/images/content/02.webp">
-				<img src="assets/images/content/02.jpg" alt="фото" width="358" height="326" loading="lazy">
-			</picture>
-			<picture class="tariffs__picture tariffs__picture-2 animated animated-opacity">
-				<source type="image/webp" srcset="assets/images/content/06.webp">
-				<img src="assets/images/content/06.jpg" alt="фото" width="487" height="487" loading="lazy">
-			</picture>
+			@@loop('blocks/ui/picture/picture.html', [{
+				"class": "tariffs__picture tariffs__picture-1",
+				"src": "assets/images/content/02",
+				"imgClass": "img-cover",
+				"width": "358",
+				"height": "326",
+				"animatedOpacity": true
+			}, {
+				"class": "tariffs__picture tariffs__picture-2",
+				"src": "assets/images/content/06",
+				"imgClass": "img-cover",
+				"width": "487",
+				"height": "487",
+				"animatedOpacity": true
+			}])
 		</div>
 	</div>
 </section>

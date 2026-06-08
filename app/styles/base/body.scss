@@ -1,8 +1,8 @@
 body {
 	min-width: 320px;
 	font-style: normal;
-	font-family: $ff;
-	font-size: calc(#{$fz} / 10 * 1rem);
+	font-family: $font-family;
+	font-size: calc(#{$font-size} / 10 * 1rem);
 	line-height: 1.5;
 	font-weight: 400;
 	color: $color-default;
@@ -20,27 +20,12 @@ body {
 button,
 input,
 textarea {
-	font-family: $ff;
-}
-
-img {
-	max-width: 100%;
-	height: auto;
-	vertical-align: top;
-	border: none;
-
-	table & {
-		max-width: none;
-	}
+	font-family: $font-family;
 }
 
 p {
 	@extend %text-32;
 	letter-spacing: 0.02em;
-}
-
-.img-cover {
-	@extend %cover;
 }
 
 .animated {

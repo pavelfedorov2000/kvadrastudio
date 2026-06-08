@@ -1,6 +1,6 @@
-.marquee {
-	$this: &;
+$name: '.marquee';
 
+#{$name} {
 	@include padding-y(var(--gap-xs));
 	background-color: var(--accent);
 	color: var(--white);
@@ -12,7 +12,7 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			#{$this}__content {
+			#{$name}__content {
 				animation-play-state: paused;
 			}
 		}

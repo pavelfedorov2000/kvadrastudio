@@ -1,4 +1,6 @@
-.feedback-form {
+$name: '.feedback-form';
+
+#{$name} {
 	$btn-width: 42.7rem;
 
 	@include row-grid(var(--gap-xs));
@@ -18,7 +20,7 @@
 		row-gap: 2.4rem;
 	}
 
-	>* {
+	> * {
 		grid-column: 1 / -1;
 	}
 
@@ -51,41 +53,6 @@
 		@media(max-width: $sm) {
 			font-size: 1.4rem;
 			line-height: calc(40.25 / 14 * 100%);
-		}
-	}
-}
-
-.input {
-	width: 100%;
-	padding: 1.6rem var(--gap-xxs);
-	border-bottom: 0.2rem solid var(--accent);
-
-	@media(max-width: $sm) {
-		padding: 0 0 0.8rem;
-		border-bottom-width: 0.082rem;
-	}
-
-	&::placeholder {
-		color: var(--color-888);
-	}
-}
-
-.textarea {
-	min-height: 12rem;
-	border-top: none;
-	border-right: none;
-	border-left: 0.2rem solid var(--accent);
-
-	@media(max-width: $sm) {
-		border-left-width: 0.082rem;
-		padding-left: 1.2rem;
-	}
-
-	&~.placeholder {
-		left: 1.6rem;
-
-		@media(max-width: $sm) {
-			left: 1.2rem;
 		}
 	}
 }

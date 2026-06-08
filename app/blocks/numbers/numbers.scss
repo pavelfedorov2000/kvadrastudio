@@ -1,4 +1,6 @@
-.numbers {
+$name: '.numbers';
+
+#{$name} {
 	@media(max-width: $sm) {
 		padding-top: 2.4rem;
 	}
@@ -65,9 +67,5 @@
 
 	@media(max-width: $sm) {
 		height: 31rem;
-	}
-
-	img {
-		@extend %cover;
 	}
 }

@@ -5,11 +5,14 @@
 	<main class="page">
 		@@include("blocks/promo/promo.html")
 		@@include('blocks/customer-focus/customer-focus.html')
-		<picture class="numbers-picture animated animated-img">
-			<source type="image/webp" srcset="assets/images/content/03.webp">
-			<img class="img-cover" src="assets/images/content/03.jpg" alt="фото" width="1920" height="765"
-				loading="lazy">
-		</picture>
+		@@include('blocks/ui/picture/picture.html', {
+			"class": "numbers-picture",
+			"src": "assets/images/content/03",
+			"imgClass": "img-cover",
+			"width": "1920",
+			"height": "765",
+			"animatedImg": true
+		})
 		@@include('blocks/numbers/numbers.html')
 		@@include('blocks/reviews/reviews.html')
 		@@include('blocks/portfolio/portfolio.html')

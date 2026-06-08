@@ -1,21 +1,37 @@
 <section class="section why-we-best">
 	<div class="container">
-		<h2 class="title-80 why-we-best__title animated animated-text">
-			По<span>ч</span>ему мы - <b>лучшие?</b>
-		</h2>
+		@@include('blocks/ui/title/title.html', {
+			"level": "h2",
+			"customClass": "title-80",
+			"class": "why-we-best__title",
+			"text": "По<span>ч</span>ему мы - <b>лучшие?</b>",
+			"isAnimated": true
+		})
 		<div class="why-we-best__grid">
-			<picture class="why-we-best__picture why-we-best__picture--1 animated animated-img">
-				<source type="image/webp" srcset="assets/images/content/06.webp">
-				<img src="assets/images/content/06.jpg" alt="фото" width="500" height="500" loading="lazy">
-			</picture>
-			<picture class="why-we-best__picture why-we-best__picture--2">
-				<source type="image/webp" srcset="assets/images/content/02.webp">
-				<img src="assets/images/content/02.jpg" alt="фото" width="286" height="326" loading="lazy">
-			</picture>
-			<picture class="why-we-best__picture why-we-best__picture--3 animated animated-img">
-				<source type="image/webp" srcset="assets/images/content/07.webp">
-				<img src="assets/images/content/07.jpg" alt="фото" width="620" height="620" loading="lazy">
-			</picture>
+			@@loop('blocks/ui/picture/picture.html', [{
+				"class": "why-we-best__picture",
+				"mod": "1",
+				"src": "assets/images/content/06",
+				"imgClass": "img-cover",
+				"width": "500",
+				"height": "500",
+				"animatedImg": true
+			}, {
+				"class": "why-we-best__picture",
+				"mod": "2",
+				"src": "assets/images/content/02",
+				"imgClass": "img-cover",
+				"width": "286",
+				"height": "326"
+			}, {
+				"class": "why-we-best__picture",
+				"mod": "3",
+				"src": "assets/images/content/07",
+				"imgClass": "img-cover",
+				"width": "620",
+				"height": "620",
+				"animatedImg": true
+			}])
 			<div class="why-we-best__text animated animated-text">
 				<p class="title-60">Мы рождаем</p>
 				<p class="title-60"><b>шедевры!</b></p>

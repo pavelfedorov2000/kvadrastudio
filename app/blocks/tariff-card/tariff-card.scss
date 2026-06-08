@@ -1,4 +1,6 @@
-.tariff-card {
+$name: '.tariff-card';
+
+#{$name} {
 	position: relative;
 	z-index: 2;
 	display: flex;
@@ -119,13 +121,6 @@
 	}
 
 	&__btn {
-		&.btn--style {
-			&_border-dark {
-				font-family: "Proxima Nova Rg",
-					sans-serif;
-				font-weight: 700;
-				text-transform: uppercase;
-			}
-		}
+		--btn-text-transform: uppercase;
 	}
 }

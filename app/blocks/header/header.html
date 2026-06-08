@@ -5,17 +5,27 @@
 				<span>г. Ярославль,</span>
 				ул. Щапова, 20, Офис 326
 			</p>
-			<a href="mailto:info@kvadrastudio.ru" class="contact header__email">info@kvadrastudio.ru</a>
-			<a class="logo header__logo" href="#">
-				<img class="logo__img" src="assets/images/logo/header-logo.png" alt="Логотип">
-			</a>
+			@@include('blocks/ui/link/link.html', {
+				"href": "mailto:info@kvadrastudio.ru",
+				"class": "contact header__email",
+				"text": "info@kvadrastudio.ru"
+			})
+			@@include('blocks/logo/logo.html', {
+				"class": "header__logo",
+				"src": "assets/images/logo/header-logo"
+			})
 			<div class="contacts header__phone">
-				<a href="tel:+74852942850" class="contact">+7 (4852) 94-28-50</a>
+				@@include('blocks/ui/link/link.html', {
+					"href": "tel:+74852942850",
+					"class": "contact",
+					"text": "+7 (4852) 94-28-50"
+				})
 				<p>Пн-Пт: 9.00 - 18.00</p>
 			</div>
-			@@include('blocks/button/button.html', {
+			@@include('blocks/ui/button/button.html', {
                 "class": "header__btn",
-                "style": "border-dark",
+                "mod": "dark",
+				"variant": "outlined",
                 "text": "Перезвоните мне"
 			})
 			@@include('blocks/nav-menu/nav-menu.html', {

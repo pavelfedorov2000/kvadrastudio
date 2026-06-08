@@ -1,22 +1,45 @@
 <form class="feedback-form feedback__form">
-	<h2 class="title-80 feedback-form__title animated animated-text">
-		Обратная <b>связь</b>
-	</h2>
+	@@include('blocks/ui/title/title.html', {
+		"level": "h2",
+		"customClass": "title-80",
+		"class": "feedback-form__title",
+		"text": "Обратная <b>связь</b>",
+		"isAnimated": true
+	})
 	<div class="feedback-form__fields">
 		<label class="feedback-form__field span-2">
-			<input class="input" placeholder="Ваше имя*" required>
+			@@include('blocks/ui/input/input.html', {
+				"name": "name",
+				"placeholder": "Ваше имя",
+				"required": true
+			})
 		</label>
 		<label class="feedback-form__field">
-			<input class="input" type="tel" placeholder="Ваш номер телефона*" required>
+			@@include('blocks/ui/input/input.html', {
+				"type": "tel",
+				"name": "phone",
+				"placeholder": "Ваш номер телефона",
+				"required": true
+			})
 		</label>
 		<label class="feedback-form__field">
-			<input class="input" type="email" placeholder="Ваш E-mail*">
+			@@include('blocks/ui/input/input.html', {
+				"type": "email",
+				"name": "email",
+				"placeholder": "Ваш E-mail",
+				"required": true
+			})
 		</label>
 		<label class="feedback-form__field span-2">
-			<textarea class="input textarea" placeholder="Ваше сообщение*" required></textarea>
+			@@include('blocks/ui/input/input.html', {	
+				"name": "message",
+				"placeholder": "Ваше сообщение",
+				"required": true,
+				"textarea": true
+			})
 		</label>
 	</div>
-	@@include('blocks/button/button.html', {
+	@@include('blocks/ui/button/button.html', {
         "class": "feedback-form__btn animated animated-text",
         "type": "submit",
         "text": "Отправить"

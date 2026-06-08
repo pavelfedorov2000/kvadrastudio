@@ -1,7 +1,10 @@
-<aside class="section feedback">
-	<picture class="feedback__picture">
-		<source type="image/webp" srcset="assets/images/content/12.webp">
-		<img src="assets/images/content/12.jpg" alt="" width="1594" height="719" loading="lazy">
-	</picture>
+<section class="section feedback">
+	@@include('blocks/ui/picture/picture.html', {
+		"class": "feedback__picture",
+		"src": "assets/images/content/12",
+		"imgClass": "img-cover",
+		"width": "1594",
+		"height": "719"
+	})
 	@@include('blocks/feedback-form/feedback-form.html')
-</aside>
+</section>

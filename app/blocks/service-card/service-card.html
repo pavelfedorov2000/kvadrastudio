@@ -1,8 +1,11 @@
 <article class="service-card">
-	<picture class="service-card__picture">
-		<source type="image/webp" srcset="assets/images/content/04.webp">
-		<img src="assets/images/content/04.jpg" alt="фото" width="1920" height="765" loading="lazy">
-	</picture>
+	@@include('blocks/ui/picture/picture.html', {
+		"class": "service-card__picture",
+		"src": "assets/images/content/04",
+		"imgClass": "img-cover",
+		"width": "1920",
+		"height": "765"
+	})
 	<div class="service-card__content">
 		<span class="service-card__line"></span>
 		<p class="service-card__text animated animated-text">
@@ -11,8 +14,8 @@
 			от застройщика для получения компенсации
 		</p>
 		<a href="#" class="service-card__title full-link animated animated-text">
-			Бесплатно
-			<svg viewBox="0 0 121 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<span>Бесплатно</span>
+			<svg class="service-card__arrow" viewBox="0 0 121 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd"
 					d="M120.707 8.70711C121.098 8.31658 121.098 7.68342 120.707 7.29289L114.343 0.928932C113.953 0.538408 113.319 0.538408 112.929 0.928932C112.538 1.31946 112.538 1.95262 112.929 2.34315L118.586 8L112.929 13.6569C112.538 14.0474 112.538 14.6805 112.929 15.0711C113.319 15.4616 113.953 15.4616 114.343 15.0711L120.707 8.70711ZM0 9L120 9V7L0 7L0 9Z" />
 			</svg>

@@ -1,6 +1,6 @@
 :root {
 	--accent: #897163;
-	--black: #333333;
+	--black: #333;
 	--white: #fff;
 	--color-888: #888;
 	--color-999: #999;
@@ -19,6 +19,7 @@
 	--header-height: 22.6rem;
 	--section-padding: var(--gap-s);
 	--section-padding-xs: var(--gap-xs);
+	--section-padding-xxs: var(--gap-xxs);
 	--mobile-padding: 1.6rem;
 
 	@media(max-width: $lg) {

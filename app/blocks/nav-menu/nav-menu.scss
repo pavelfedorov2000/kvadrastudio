@@ -1,0 +1,42 @@
+$name: '.nav-menu';
+
+#{$name} {
+	@include padding-y(3rem);
+	display: flex;
+
+	@media(min-width: $xl) {
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	@media(max-width: $lg) {
+		flex-direction: column;
+		gap: 1.6rem;
+	}
+
+	// .nav-menu__link
+
+	&__link {
+		@extend %text-16;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: #000;
+		transition: $transition color;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--accent);
+			}
+		}
+	}
+
+	> span {
+		display: none;
+
+		@media(min-width: $xl) {
+			display: inline-block;
+			@include round(0.5rem);
+			background-color: var(--black);
+		}
+	}
+}

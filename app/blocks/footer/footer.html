@@ -3,46 +3,94 @@
 		<div class="footer__grid">
 			<div class="footer__aside">
 				<div class="footer__logo">
-					<a href="#" class="logo">
-						<picture>
-							<source type="image/webp" srcset="assets/images/logo/footer-logo.webp">
-							<img class="logo__img" src="assets/images/logo/footer-logo.png" alt="лого" width="310"
-								height="84" loading="lazy">
-						</picture>
-					</a>
+					@@include('blocks/logo/logo.html', {
+						"class": "footer__logo",
+						"src": "assets/images/logo/footer-logo"
+					})
 					<span class="footer__logo-line"></span>
 					<p class="footer__logo-descr">
 						Студия дизайна интерьера в ярославле
 					</p>
 				</div>
-				<picture class="footer__picture">
-					<source type="image/webp" srcset="assets/images/content/02.webp">
-					<img src="assets/images/content/02.jpg" alt="" width="" height="" loading="lazy">
-				</picture>
+				@@include('blocks/ui/picture/picture.html', {
+					"class": "footer__picture",
+					"src": "assets/images/content/02",
+					"imgClass": "img-cover",
+					"width": "310",
+					"height": "353"
+				})
 			</div>
 			<div class="footer__main">
 				<div class="footer__menu footer__menu--1">
 					<span class="footer__menu-title">Дизайн</span>
 					<ul class="footer__list">
-						<li><a class="footer__menu-link" href="#">Дизайн домов</a></li>
-						<li><a class="footer__menu-link" href="#">Дизайн квартир</a></li>
-						<li><a class="footer__menu-link" href="#">Дизайн ванной</a></li>
-						<li><a class="footer__menu-link" href="#">Дизайн спален</a></li>
+						<li>
+							@@include('blocks/ui/link/link.html', {
+								"href": "#",
+								"class": "footer__menu-link",
+								"text": "Дизайн домов"
+							})
+						</li>
+						<li>
+							@@include('blocks/ui/link/link.html', {
+								"href": "#",
+								"class": "footer__menu-link",
+								"text": "Дизайн квартир"
+							})
+						</li>
+						<li>
+							@@include('blocks/ui/link/link.html', {
+								"href": "#",
+								"class": "footer__menu-link",
+								"text": "Дизайн ванной"
+							})
+						</li>
+						<li>
+							@@include('blocks/ui/link/link.html', {
+								"href": "#",
+								"class": "footer__menu-link",
+								"text": "Дизайн спален"
+							})
+						</li>
 					</ul>
 				</div>
 				<div class="footer__menu footer__menu--2">
 					<span class="footer__menu-title">Услуги</span>
 					<ul class="footer__list">
-						<li><a class="footer__menu-link" href="#">Авторский надзор</a></li>
-						<li><a class="footer__menu-link" href="#">Архитектурное проектирование</a></li>
-						<li><a class="footer__menu-link" href="#">Ремонтно-отделочные работы</a></li>
-						<li><a class="footer__menu-link" href="#">Технический состав проекта</a></li>
+						<li>
+							@@include('blocks/ui/link/link.html', {
+								"href": "#",
+								"class": "footer__menu-link",
+								"text": "Авторский надзор"
+							})
+						</li>
+						<li>
+							@@include('blocks/ui/link/link.html', {
+								"href": "#",
+								"class": "footer__menu-link",
+								"text": "Архитектурное проектирование"
+							})
+						</li>
+						<li>
+							@@include('blocks/ui/link/link.html', {
+								"href": "#",
+								"class": "footer__menu-link",
+								"text": "Ремонтно-отделочные работы"
+							})
+						</li>
+						<li>
+							@@include('blocks/ui/link/link.html', {
+								"href": "#",
+								"class": "footer__menu-link",
+								"text": "Технический состав проекта"
+							})
+						</li>
 					</ul>
 				</div>
 				<address class="footer__contact">
-					@@include('blocks/button/button.html', {
+					@@include('blocks/ui/button/button.html', {
                         "class": "footer__btn",
-                        "style": "border",
+                        "mod": "outlined",
                         "text": "Перезвоните мне"
 					})
 					<div class="footer__contacts">

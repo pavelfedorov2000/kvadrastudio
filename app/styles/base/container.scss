@@ -1,0 +1,19 @@
+.container {
+	@include padding-x(var(--gap));
+
+	@media(max-width: $lg) {
+		@include padding-x(var(--mobile-padding));
+	}
+
+	&--desktop {
+		@media(max-width: $lg) {
+			@include padding-x(0);
+
+			.section__grid {
+				.section__top {
+					@include margin-x(var(--mobile-padding));
+				}
+			}
+		}
+	}
+}

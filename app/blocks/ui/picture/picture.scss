@@ -1,0 +1,18 @@
+.img-cover {
+	@extend %cover;
+}
+
+picture {
+	display: block;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+	border: none;
+
+	table & {
+		max-width: none;
+	}
+}

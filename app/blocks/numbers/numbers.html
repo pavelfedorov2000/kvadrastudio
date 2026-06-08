@@ -1,6 +1,10 @@
 <section class="section numbers">
 	<div class="container">
-		<h2 class="visually-hidden">Мы в цифрах</h2>
+		@@include('blocks/ui/title/title.html', {
+			"level": "h2",
+			"text": "Мы в цифрах",
+			"isHidden": true
+		})
 		<dl class="numbers__list animated animated-text">
 			<div class="numbers__item">
 				<dt>лет на рынке</dt>

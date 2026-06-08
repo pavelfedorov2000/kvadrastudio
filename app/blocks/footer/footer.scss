@@ -1,4 +1,6 @@
-.footer {
+$name: '.footer';
+
+#{$name} {
 	position: relative;
 	padding-top: var(--gap-xs);
 	background-color: var(--black);
@@ -90,10 +92,6 @@
 			right: -11.9rem;
 			width: 21rem;
 			height: 23.9rem;
-		}
-
-		img {
-			@extend %cover;
 		}
 	}
 
@@ -222,12 +220,8 @@
 	}
 
 	&__btn {
-		padding: 1rem;
-		color: var(--white);
-
-		.btn__text {
-			color: var(--white);
-		}
+		--btn-padding: 0 1rem;
+		--btn-color: var(--white);
 	}
 
 	// .footer__contacts

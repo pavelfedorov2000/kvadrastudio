@@ -1,6 +1,6 @@
-.benefits {
-	$this: &;
+$name: '.benefits';
 
+#{$name} {
 	position: relative;
 	background-color: var(--accent);
 	color: var(--white);
@@ -68,7 +68,7 @@
 				}
 			}
 
-			#{$this} {
+			#{$name} {
 				&__item-img {
 					@media(max-width: $sm) {
 						position: relative;
@@ -94,7 +94,7 @@
 			@media(max-width: $lg) {
 				grid-template-columns: 5.3rem 1fr 4.5rem;
 
-				#{$this} {
+				#{$name} {
 					&__item-text {
 						grid-column: 1 / -1;
 						display: grid;
@@ -145,10 +145,6 @@
 				opacity: 1;
 			}
 		}
-
-		img {
-			@extend %cover;
-		}
 	}
 
 	// .benefits__item-text
@@ -163,9 +159,7 @@
 		}
 
 		span {
-			font-family: "Proxima Nova Lt",
-				sans-serif;
-			font-weight: 300;
+			@extend %proxima-light;
 
 			&:last-child {
 				@media(max-width: $sm) {

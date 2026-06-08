@@ -1,4 +1,6 @@
-.tariffs {
+$name: '.tariffs';
+
+#{$name} {
 	--card-height: 89.9rem;
 	--picture-1-height: 32.6rem;
 	--picture-2-height: 48.7rem;
@@ -78,10 +80,6 @@
 
 	&__picture {
 		position: absolute;
-
-		img {
-			@extend %cover;
-		}
 	}
 
 	// .tariffs__picture-1

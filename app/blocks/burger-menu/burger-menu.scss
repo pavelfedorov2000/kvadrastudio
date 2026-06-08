@@ -1,4 +1,6 @@
-.burger-menu {
+$name: '.burger-menu';
+
+#{$name} {
 	display: none;
 
 	@media (max-width: $lg) {

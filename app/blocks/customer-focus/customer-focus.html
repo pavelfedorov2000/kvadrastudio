@@ -2,19 +2,32 @@
 	<div class="container container--desktop">
 		<div class="customer-focus__grid">
 			<div class="section__top customer-focus__heading">
-				<h2 class="visually-hidden">Клиентоориентированность</h2>
+				@@include('blocks/ui/title/title.html', {
+					"level": "h2",
+					"text": "Клиентоориентированность",
+					"isHidden": true
+				})
 				<span class="title-60 animated animated-text"><b>Мы с вами</b> на всех этапах:</span>
 				<span class="title-60 animated animated-text">создаём дизайн-проект, ищем</span>
 				<span class="title-60 animated animated-text">пространство и следим за ходом работ</span>
 			</div>
-			<picture class="customer-focus__picture customer-focus__picture--1 animated animated-img">
-				<source type="image/webp" srcset="assets/images/content/01.webp">
-				<img src="assets/images/content/01.jpg" alt="фото" width="500" height="500" loading="lazy">
-			</picture>
-			<picture class="customer-focus__picture customer-focus__picture--2 animated animated-img">
-				<source type="image/webp" srcset="assets/images/content/02.webp">
-				<img src="assets/images/content/02.jpg" alt="фото" width="286" height="326" loading="lazy">
-			</picture>
+			@@loop('blocks/ui/picture/picture.html', [{
+				"class": "customer-focus__picture",
+				"mod": "1",
+				"src": "assets/images/content/01",
+				"imgClass": "img-cover",
+				"width": "500",
+				"height": "500",
+				"animatedImg": true
+			}, {
+				"class": "customer-focus__picture",
+				"mod": "2",
+				"src": "assets/images/content/02",
+				"imgClass": "img-cover",
+				"width": "286",
+				"height": "326",
+				"animatedImg": true
+			}])
 			<div class="customer-focus__text">
 				<p class="title-60 animated animated-text">И уважаем ваш <b>комфорт</b></p>
 			</div>

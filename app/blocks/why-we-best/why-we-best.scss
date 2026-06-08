@@ -1,4 +1,6 @@
-.why-we-best {
+$name: '.why-we-best';
+
+#{$name} {
 	position: relative;
 
 	@media(max-width: $lg) {
@@ -34,9 +36,7 @@
 		}
 
 		span {
-			font-family: 'Proxima Nova Lt',
-				sans-serif;
-			font-weight: 300;
+			@extend %proxima-light;
 			position: relative;
 
 			&::after {
@@ -73,10 +73,6 @@
 	// .why-we-best__picture
 
 	&__picture {
-		img {
-			@extend %cover;
-		}
-
 		&--1 {
 			position: relative;
 			z-index: 1;

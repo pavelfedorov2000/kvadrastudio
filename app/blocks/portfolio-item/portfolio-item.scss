@@ -1,4 +1,6 @@
-.portfolio-item {
+$name: '.portfolio-item';
+
+#{$name} {
 	display: grid;
 	grid-template-rows: 70rem auto;
 
@@ -11,19 +13,15 @@
 	&__img {
 		display: block;
 		height: 100%;
-
-		img {
-			@extend %cover;
-		}
 	}
 
 	// .portfolio-item__content
 
 	&__content {
+		@extend %text-28;
 		padding-top: var(--gap-xxs);
 		@include row-grid(var(--gap-xxxs));
 		justify-items: start;
-		@extend %text-28;
 		letter-spacing: 0.02em;
 		text-transform: uppercase;
 
@@ -54,6 +52,8 @@
 
 	&__address {
 		color: var(--color-888);
+		font-size: 2.8rem;
+		line-height: calc(50 / 28 * 100%);
 
 		@media(max-width: $sm) {
 			font-size: 1.4rem;
@@ -63,12 +63,14 @@
 
 	&__btn {
 		margin-top: 0.4rem;
-		font-size: 2rem;
-		line-height: calc(42 / 20 * 100%);
+
+		--btn-font-size: 2rem;
+		--btn-line-height: round(calc(42 / 20 * 100%));
+		--btn-text-transform: uppercase;
 
 		@media(max-width: $sm) {
-			font-size: 1.2rem;
-			line-height: calc(20 / 12 * 100%);
+			--btn-font-size: 1.2rem;
+			--btn-line-height: round(calc(20 / 12 * 100%));
 		}
 	}
 }

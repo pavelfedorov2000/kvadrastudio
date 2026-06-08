@@ -1,8 +1,14 @@
-.portfolio {
+$name: '.portfolio';
+
+#{$name} {
+	@media(max-width: $sm) {
+		padding-bottom: var(--section-padding-xxs);
+	}
+
 	// .portfolio__items
 
 	&__items {
-		@include row-grid(var(--gap-xs));
+		@include row-grid(var(--gap-xxs));
 
 		@media(min-width: $xl) {
 			position: relative;

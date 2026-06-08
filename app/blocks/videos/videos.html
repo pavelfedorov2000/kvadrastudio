@@ -2,7 +2,11 @@
 	<div class="container">
 		<div class="section__grid">
 			<div class="section__top">
-				<h2 class="visually-hidden">Интерьер</h2>
+				@@include('blocks/ui/title/title.html', {
+					"level": "h2",
+					"text": "Интерьер",
+					"isHidden": true
+				})
 				<p class="title-80 animated animated-text">Таким интерьер может быть</p>
 				<p class="title-80 animated animated-text">И у Вас. <strong>И даже лучше.</strong></p>
 				<p class="animated animated-text">
@@ -12,32 +16,38 @@
 				</p>
 			</div>
 			<div class="video">
-				<a href="https://www.instagram.com/kvadra_studio/?hl=ru"
-					class="player video__player animated animated-opacity" target="_blank">
-					<svg viewBox="0 0 54 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M1.5 3.10334L51.222 35L1.5 66.8967L1.5 3.10334Z" stroke-width="3" />
-					</svg>
-				</a>
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/10.webp">
-					<img class="img-cover" src="assets/images/content/10.jpg" alt="фото" width="1520" height="800"
-						loading="lazy">
-				</picture>
+				@@include('blocks/ui/button/button.html', {
+					"class": "video__player",
+					"isRounded": true,
+					"animated": "opacity",
+					"href": "https://www.instagram.com/kvadra_studio/?hl=ru",
+					"icon": "player",
+					"target": "_blank"
+				})
+				@@include('blocks/ui/picture/picture.html', {
+					"class": "video__picture",
+					"src": "assets/images/content/10",
+					"imgClass": "img-cover",
+					"width": "1520",
+					"height": "800"
+				})
 			</div>
 			<div class="video">
-				<a href="https://www.instagram.com/kvadra_studio/?hl=ru"
-					class="player video__player animated animated-opacity" target="_blank">
-					<svg viewBox="0 0 54 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M1.5 3.10334L51.222 35L1.5 66.8967L1.5 3.10334Z" stroke-width="3" />
-					</svg>
-				</a>
-				<picture>
-					<source type="image/webp" srcset="assets/images/content/11.webp">
-					<img class="img-cover" src="assets/images/content/11.jpg" alt="фото" width="1520" height="800"
-						loading="lazy">
-				</picture>
+				@@include('blocks/ui/button/button.html', {
+					"class": "video__player",
+					"isRounded": true,
+					"animated": "opacity",
+					"href": "https://www.instagram.com/kvadra_studio/?hl=ru",
+					"icon": "player",
+					"target": "_blank"
+				})
+				@@include('blocks/ui/picture/picture.html', {
+					"class": "video__picture",
+					"src": "assets/images/content/11",
+					"imgClass": "img-cover",
+					"width": "1520",
+					"height": "800"
+				})
 			</div>
 			<p class="videos__text animated animated-text">
 				После сдачи вашего проекта мы подарим

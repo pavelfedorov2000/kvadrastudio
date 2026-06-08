@@ -1,6 +1,12 @@
-.customer-focus {
+$name: '.customer-focus';
+
+#{$name} {
 	@media(max-width: $lg) {
 		padding-bottom: 0;
+	}
+
+	@media(max-width: $sm) {
+		padding-top: 0;
 	}
 
 	// .customer-focus__grid
@@ -71,10 +77,6 @@
 				grid-column: 3 / -1;
 				grid-row: 4 / 5;
 			}
-		}
-
-		img {
-			@extend %cover;
 		}
 	}
 

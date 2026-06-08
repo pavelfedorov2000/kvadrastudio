@@ -2,9 +2,12 @@
 	<div class="reviews__body" style="background-image: url(assets/images/content/reviews-bg.jpg);">
 		<div class="container">
 			<div class="reviews__grid">
-				<h2 class="title-60 reviews__title">
-					Отзывы <b>о нас</b>
-				</h2>
+				@@include('blocks/ui/title/title.html', {
+					"level": "h2",
+					"class": "reviews__title",
+					"customClass": "title-60",
+					"text": "Отзывы <b>о нас</b>"
+				})
 				<div class="swiper reviews-slider reviews__slider">
 					<ul class="swiper-wrapper">
 						@@include('blocks/review/review.html')

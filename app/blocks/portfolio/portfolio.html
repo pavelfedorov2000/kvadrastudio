@@ -2,9 +2,12 @@
 	<div class="container container--desktop">
 		<div class="section__grid">
 			<div class="section__top">
-				<h2 class="title-60 animated animated-text">
-					<span>Наше по<span>р</span>тфолио</span>
-				</h2>
+				@@include('blocks/ui/title/title.html', {
+					"level": "h2",
+					"customClass": "title-60",
+					"text": "Наше по<span>р</span>тфолио",
+					"isAnimated": true
+				})
 				<p class="animated animated-text">Все фото наших работ - это 100% настоящие фотографии выполненных нами
 					проектов.
 				</p>

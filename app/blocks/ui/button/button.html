@@ -1,0 +1,8 @@
+<@@if(!context.href){button}@@if(context.href){a href="@@href" } class="btn@@if(context.class){ @@class}@@if(context.mod){ btn--@@mod}@@if(context.variant){ btn--@@variant}@@if(context.isRounded){ btn--rounded}@@if(context.disabled){ btn--disabled}@@if(context.animated){ animated animated--@@animated}" @@if(!context.href){type="@@if(context.type == 'submit'){submit}@@if(context.type == 'reset'){reset}@@if(!context.type){button}" } @@if(context.isDisabled){disabled}@@if(context.active){ aria-selected="true" }@@if(context.style=="tab" ){ role="tab" }@@if(context.target){ target="@@target" }>
+	@@if(context.icon){
+	    @@include('blocks/icons/@@icon.html', {
+			"class": "btn__icon"
+		})
+	}
+	@@if(context.text){<span class="btn__text">@@text</span>}
+</@@if(!context.href){button}@@if(context.href){a}>

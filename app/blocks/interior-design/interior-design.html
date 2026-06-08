@@ -1,34 +1,32 @@
 <section class="section interior-design">
 	<div class="section__top interior-design__top">
-		<h2 class="title-80 animated animated-text">
-			Дизайн <b>интерьера</b>
-		</h2>
+		@@include('blocks/ui/title/title.html', {
+			"level": "h2",
+			"customClass": "title-80",
+			"text": "Дизайн <b>интерьера</b>",
+			"isAnimated": true
+		})
 		<p class="interior-design__text animated animated-text">
 			Стиль, функциональность, индивидуальность и практичность —
 			четыре составляющие идеального интерьера
 		</p>
 	</div>
-	<div class="interior-design__item interior-item interior-design__item--1">
-		<div class="interior-item__title title-60">Архитектура</div>
-		<picture class="interior-item__picture animated animated-img">
-			<source type="image/webp" srcset="assets/images/content/interior-design/01.webp">
-			<img src="assets/images/content/interior-design/01.jpg" alt="фото" width="1374" height="400" loading="lazy">
-		</picture>
-	</div>
-	<div class="interior-design__item interior-item interior-design__item--2">
-		<div class="interior-item__title title-60">Ремонт</div>
-		<picture class="interior-item__picture animated animated-img">
-			<source type="image/webp" srcset="assets/images/content/interior-design/02.webp">
-			<img src="assets/images/content/interior-design/02.jpg" alt="фото" width="1374" height="400" loading="lazy">
-		</picture>
-	</div>
-	<div class="interior-design__item interior-item interior-design__item--3">
-		<div class="interior-item__title title-60">Изделия на заказ</div>
-		<picture class="interior-item__picture animated animated-img">
-			<source type="image/webp" srcset="assets/images/content/interior-design/03.webp">
-			<img src="assets/images/content/interior-design/03.jpg" alt="фото" width="1374" height="400" loading="lazy">
-		</picture>
-	</div>
+	@@loop('blocks/interior-item/interior-item.html', [{
+		"class": "interior-design__item",
+		"mod": "1",
+		"src": "assets/images/content/interior-design/01",
+		"title": "Архитектура"
+	}, {
+		"class": "interior-design__item",
+		"mod": "2",
+		"src": "assets/images/content/interior-design/02",
+		"title": "Ремонт"
+	}, {
+		"class": "interior-design__item",
+		"mod": "3",
+		"src": "assets/images/content/interior-design/03",
+		"title": "Изделия на заказ"
+	}])
 	<svg class="arrow interior-design__arrow arrow--white animated animated-text" viewBox="0 0 16 121" fill="none"
 		xmlns="http://www.w3.org/2000/svg">
 		<path fill-rule="evenodd" clip-rule="evenodd"

@@ -1,4 +1,6 @@
-.review {
+$name: '.review';
+
+#{$name} {
 	@extend %proxima-light;
 	width: 100%;
 	// .review__text

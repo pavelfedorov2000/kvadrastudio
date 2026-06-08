@@ -1,6 +1,6 @@
-.slider-arrow {
-	$this: &;
+$name: '.slider-arrow';
 
+#{$name} {
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -18,7 +18,7 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			#{$this} {
+			#{$name} {
 				&__svg {
 					fill: var(--accent);
 				}

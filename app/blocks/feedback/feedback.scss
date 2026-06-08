@@ -16,12 +16,12 @@
 		top: 0;
 		left: 8rem;
 		z-index: 2;
-		@include round(37.2rem);
 		border: 0.1rem dashed rgba(51, 51, 51, 0.8);
 		animation-name: rotate;
 		animation-duration: 10s;
 		animation-timing-function: ease-in-out;
 		animation-iteration-count: infinite;
+		@include round(37.2rem);
 
 		@media(max-width: $lg) {
 			top: var(--gap-xs);
@@ -64,10 +64,6 @@
 				background-position: center;
 				background-repeat: no-repeat;
 			}
-		}
-
-		img {
-			@extend %cover;
 		}
 	}
 }

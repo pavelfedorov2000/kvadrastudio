@@ -1,12 +1,18 @@
 <section class="section about-us">
-	<picture class="about-us__picture">
-		<source type="image/webp" srcset="assets/images/content/09.webp">
-		<img src="assets/images/content/09.jpg" alt="фото" width="1920" height="600" loading="lazy">
-	</picture>
+	@@include('blocks/ui/picture/picture.html', {
+		"class": "about-us__picture",
+		"src": "assets/images/content/09",
+		"imgClass": "img-cover",
+		"width": "1920",
+		"height": "600"
+	})
 	<div class="about-us__content">
-		<h2 class="title-80 animated animated-text">
-			О <span>нас</span>
-		</h2>
+		@@include('blocks/ui/title/title.html', {
+			"level": "h2",
+			"customClass": "title-80",
+			"text": "О <span>нас</span>",
+			"isAnimated": true
+		})
 		<p class="about-us__subtitle animated animated-text">
 			Дизайн студия интерьера в Ярославле | Квадра
 		</p>

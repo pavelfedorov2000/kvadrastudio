@@ -1,66 +1,53 @@
-.player {
-	@include round(28.6rem);
-	background-color: var(--accent);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	@media(max-width: $lg) {
-		width: 12rem;
-		height: 12rem;
-	}
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: -4.3rem;
-		right: -4.3rem;
-		bottom: -4.3rem;
-		left: -4.3rem;
-		border-radius: 50%;
-		border: 0.2rem solid rgba(51, 51, 51, 0.8);
-		transition: $transition opacity;
-
-		@media(max-width: $lg) {
-			top: -1.5rem;
-			right: -1.5rem;
-			bottom: -1.5rem;
-			left: -1.5rem;
-			border-width: 0.08rem;
-		}
-	}
-
-	svg {
-		width: 5.4rem;
-		height: 7rem;
-		stroke: var(--white);
-		stroke-opacity: 0.5;
-		transition: $transition stroke-opacity;
-
-		@media(max-width: $lg) {
-			width: 3.2rem;
-			height: 3.2rem;
-		}
-	}
-
-	@media (any-hover: hover) {
-		&:hover {
-			&::before {
-				opacity: 0;
-			}
-
-			svg {
-				stroke-opacity: 1;
-			}
-		}
-	}
-}
-
 .video {
 	position: relative;
 
 	&__player {
 		@extend %pos-center-xy;
+
+		--btn-min-width: 28.6rem;
+		--btn-min-height: 28.6rem;
+		--btn-icon-size: 5.4rem;
+
+		.btn__icon {
+			fill: none;
+			stroke: var(--btn-color);
+			stroke-opacity: 0.5;
+			transition: $transition stroke-opacity;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			inset: -4.3rem;
+			border-radius: 50%;
+			border: 0.2rem solid rgba(51, 51, 51, 0.8);
+			transition: $transition opacity;
+	
+			@media(max-width: $lg) {
+				inset: -1.5rem;
+				border-width: 0.08rem;
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				.btn__icon {
+					fill: none;
+					stroke-opacity: 1;
+				}
+			}
+		}
+
+		&:active {
+			fill: none;
+			stroke: var(--btn-color--active);
+		}
+
+		@media(max-width: $lg) {
+			--btn-min-width: 12rem;
+			--btn-min-height: 12rem;
+			--btn-icon-size: 3.2rem;
+		}
 	}
 
 	@media(max-width: $lg) {

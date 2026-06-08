@@ -1,4 +1,6 @@
-.new-interior {
+$name: '.new-interior';
+
+#{$name} {
 	&__arrow {
 		position: absolute;
 		top: 0;

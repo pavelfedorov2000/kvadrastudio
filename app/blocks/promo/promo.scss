@@ -1,4 +1,6 @@
-.promo {
+$name: '.promo';
+
+#{$name} {
 	position: relative;
 	display: grid;
 
@@ -26,12 +28,6 @@
 	&__content {
 		grid-column: 1 / 2;
 		grid-row: 1 / 2;
-	}
-
-	&__bg {
-		img {
-			@extend %cover;
-		}
 	}
 
 	// .promo__content
@@ -67,8 +63,18 @@
 	// .promo__play
 
 	&__play {
+		--btn-min-width: 4.9rem;
+		--btn-min-height: 4.9rem;
+		--btn-icon-size: 3.2rem;
+
 		grid-area: play;
 		justify-self: end;
+
+		@media(max-width: $sm) {
+			--btn-min-width: 3.2rem;
+			--btn-min-height: 3.2rem;
+			--btn-icon-size: 1.6rem;
+		}
 	}
 
 	// .promo__title
@@ -110,11 +116,17 @@
 	// .promo__btn
 
 	&__btn {
+		--btn-padding: var(--gap-xxs);
+		--btn-min-width: 28.6rem;
+		--btn-min-height: 28.6rem;
+		--btn-font-size: 2.2rem;
+		--btn-line-height: round(calc(27 / 22 * 100%));
+		--btn-text-transform: none;
+		--btn-letter-spacing: 0.1em;
+		
 		position: relative;
 		z-index: 2;
 		grid-area: btn;
-		width: 28.6rem;
-		height: 28.6rem;
 
 		@media(max-width: $lg) {
 			z-index: 2;
@@ -122,64 +134,22 @@
 		}
 
 		@media(max-width: $sm) {
-			width: 21rem;
-			height: 21rem;
+			--btn-min-width: 21rem;
+			--btn-min-height: 21rem;
+			--btn-padding: 2rem;
+			--btn-font-size: 1.6rem;
+			--btn-line-height: round(calc(19 / 16 * 100%));
 		}
 
 		&::before {
 			content: '';
 			position: absolute;
-			top: -4.3rem;
-			right: -4.3rem;
-			bottom: -4.3rem;
-			left: -4.3rem;
+			inset: -4.3rem;
 			border: $border;
 			border-radius: 50%;
 
 			@media(max-width: $sm) {
-				top: -2.7rem;
-				right: -2.7rem;
-				bottom: -2.7rem;
-				left: -2.7rem;
-			}
-		}
-	}
-}
-
-.play-btn {
-	$this: &;
-
-	@include round(4.9rem);
-	border: 0.1rem solid var(--white);
-	display: grid;
-	place-items: center;
-	transition: $transition border-color;
-
-	@media(max-width: $sm) {
-		width: 3.2rem;
-		height: 3.2rem;
-	}
-
-	// .play-btn__svg
-
-	&__svg {
-		width: 3.2rem;
-		height: 3.2rem;
-		fill: var(--white);
-		transition: $transition fill;
-
-		@media(max-width: $sm) {
-			width: 1.6rem;
-			height: 1.6rem;
-		}
-	}
-
-	@media (any-hover: hover) {
-		&:hover {
-			border-color: var(--accent);
-
-			#{$this}__svg {
-				fill: var(--accent);
+				inset: -2.7rem;
 			}
 		}
 	}

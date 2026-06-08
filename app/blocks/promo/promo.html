@@ -1,23 +1,22 @@
 <div class="section section--without_padding-top">
 	<div class="promo">
-		<picture class="promo__bg">
-			<source type="image/webp" srcset="assets/images/content/promo-bg.webp">
-			<img src="assets/images/content/promo-bg.jpg" alt="фото" width="1920" height="956" loading="lazy">
-		</picture>
+		@@include('blocks/ui/picture/picture.html', {
+			"class": "promo__bg",
+			"src": "assets/images/content/promo-bg",
+			"imgClass": "img-cover",
+			"width": "1920",
+			"height": "956"
+		})
 		<div class="promo__content">
-			<a href="https://www.instagram.com/kvadra_studio/?hl=ru" class="play-btn promo__play" target="_blank">
-				<svg class="play-btn__svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<g clip-path="url(#clip0_28_103)">
-						<path fill-rule="evenodd" clip-rule="evenodd"
-							d="M25.8346 16.5547L11.7026 25.976C11.6022 26.0428 11.4856 26.0811 11.3651 26.0869C11.2447 26.0927 11.1249 26.0656 11.0186 26.0087C10.9123 25.9518 10.8234 25.8671 10.7614 25.7637C10.6995 25.6602 10.6667 25.5419 10.6666 25.4213V6.57868C10.6667 6.45809 10.6995 6.33977 10.7614 6.23633C10.8234 6.1329 10.9123 6.04821 11.0186 5.99129C11.1249 5.93437 11.2447 5.90735 11.3651 5.91312C11.4856 5.91888 11.6022 5.9572 11.7026 6.02401L25.8346 15.4453C25.9259 15.5062 26.0008 15.5887 26.0526 15.6855C26.1044 15.7822 26.1314 15.8903 26.1314 16C26.1314 16.1098 26.1044 16.2178 26.0526 16.3146C26.0008 16.4113 25.9259 16.4938 25.8346 16.5547Z" />
-					</g>
-					<defs>
-						<clipPath id="clip0_28_103">
-							<rect width="32" height="32" fill="white" />
-						</clipPath>
-					</defs>
-				</svg>
-			</a>
+			@@include('blocks/ui/button/button.html', {
+				"class": "promo__play",
+				"variant": "outlined",
+				"mod": "white",
+				"icon": "play",
+				"isRounded": true,
+				"href": "https://www.instagram.com/kvadra_studio/?hl=ru",
+				"target": "_blank"
+			})
 			<div class="promo__title">
 				<p class="title-80">Создаём <span>Идеальное</span></p>
 				<p class="title-80"><span>Пространство.</span>для вас.</p>
@@ -26,9 +25,10 @@
 				<path fill-rule="evenodd" clip-rule="evenodd"
 					d="M7.29289 120.707C7.68342 121.098 8.31658 121.098 8.70711 120.707L15.0711 114.343C15.4616 113.953 15.4616 113.319 15.0711 112.929C14.6805 112.538 14.0474 112.538 13.6569 112.929L8 118.586L2.34315 112.929C1.95262 112.538 1.31946 112.538 0.928932 112.929C0.538408 113.319 0.538408 113.953 0.928932 114.343L7.29289 120.707ZM7 0L7 120H9L9 0L7 0Z" />
 			</svg>
-			@@include('blocks/button/button.html', {
+			@@include('blocks/ui/button/button.html', {
                 "class": "promo__btn",
-                "style": "round",
+                "mod": "dark",
+                "isRounded": true,
                 "text": "Рассчитать проект"
 			})
 		</div>

@@ -7,16 +7,21 @@
 			</svg>
 			<div class="section__top">
 				<p class="title-80 animated animated-text">Взгляните, так может выглядеть</p>
-				<h2 class="title-80 animated animated-text new-interior__title">
-					<span>Ваш новый <span>интерьер</span></span>
-				</h2>
+				@@include('blocks/ui/title/title.html', {
+					"level": "h2",
+					"customClass": "title-80",
+					"class": "new-interior__title",
+					"text": "Ваш новый <span>интерьер</span>",
+					"isAnimated": true
+				})
 				<p class="animated animated-text">Посмотрите 3D тур готового проекта.</p>
 			</div>
-			<picture>
-				<source type="image/webp" srcset="assets/images/content/05.webp">
-				<img class="img-cover" src="assets/images/content/05.jpg" alt="фото" width="1520" height="800"
-					loading="lazy">
-			</picture>
+			@@include('blocks/ui/picture/picture.html', {
+				"src": "assets/images/content/05",
+				"imgClass": "img-cover",
+				"width": "1520",
+				"height": "800"
+			})
 			<p class="animated animated-text">Мы с удовольствием сделаем такой тур и для вашего проекта.</p>
 		</div>
 	</div>
